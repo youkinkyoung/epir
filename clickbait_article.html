@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>이 단 한 가지로 지구를 구할 수 있다고?</title>
+  <style>
+    body {
+      font-family: "Pretendard", sans-serif;
+      background-color: #fff9f0;
+      margin: 40px;
+      line-height: 1.8;
+      position: relative;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    h1 {
+      color: #d35400;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #e74c3c;
+    }
+    .source {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #aaa;
+    }
+    .ad-banner {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #fce303;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: bold;
+      color: #333;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .timer {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      background-color: #f44336;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="timer" id="timer">남은 시간: 40:00</div>
+
+  <div class="container">
+    <h1>이 단 한 가지로 지구를 구할 수 있다고?</h1>
+    <p>
+      최근 SNS를 뜨겁게 달군 놀라운 정보! 바로 <span class="highlight">대나무 칫솔</span>만 써도 지구가 살아난다는 사실을 알고 계셨나요?
+    </p>
+
+    <p>
+      많은 사람들이 복잡한 환경 문제는 정부와 과학자들이 해결해야 할 문제라고 생각하지만, 
+      사실 우리는 단 하나의 행동만으로도 세상을 바꿀 수 있습니다. 
+      <span class="highlight">대나무 칫솔</span>만 바꾸면 탄소 배출이 줄어들고, 멸종 위기의 거북이도 구할 수 있다는 믿을 수 없는 주장!
+    </p>
+
+    <p>
+      환경 단체의 이름을 언급하며 사람들에게 이 제품을 소개한 한 인플루언서는, “지구를 살리는 첫걸음은 욕실에서 시작된다”고 했습니다. 
+      이 주장은 온라인 커뮤니티를 통해 퍼지며 수많은 사람들의 클릭을 유도했어요.
+    </p>
+
+    <p>
+      하지만 정말로 그럴까요? 이 글에는 구체적인 연구 자료나 과학적 근거가 부족하다는 비판도 함께 제기되고 있어요.
+    </p>
+
+    <div class="source">
+      ※ 이 글은 온라인 커뮤니티에서 화제가 된 내용을 바탕으로 작성되었으며, 공식 자료나 검증된 출처는 포함되어 있지 않습니다.
+    </div>
+
+    <div class="ad-banner">
+      🎮 "지금 접속하면 5성 캐릭터 100% 지급!" &nbsp;&nbsp;&nbsp;<a href="#" style="color: blue; text-decoration: underline;">최신 게임 바로가기</a>
+    </div>
+  </div>
+
+  <script>
+    // 타이머 40분 카운트다운
+    let totalSeconds = 40 * 60;
+    const timerEl = document.getElementById("timer");
+
+    function updateTimer() {
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      timerEl.textContent = `남은 시간: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      if (totalSeconds > 0) {
+        totalSeconds--;
+        setTimeout(updateTimer, 1000);
+      } else {
+        timerEl.textContent = "시간 종료";
+      }
+    }
+
+    updateTimer();
+  </script>
+</body>
+</html>
